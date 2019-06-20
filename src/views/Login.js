@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import './style/Login.sass';
 import LoginForm from '../components/LoginForm';
 
+const LOGO_URL = 'https://www.insightcrime.org/wp-content/uploads/2017/07/logo.png';
+
 class Login extends Component{
 
   componentDidMount(){
@@ -10,8 +12,6 @@ class Login extends Component{
   }
 
   render(){
-
-    const LOGO_URL = 'https://www.insightcrime.org/wp-content/uploads/2017/07/logo.png';
 
     return(
       <div className="row h-100 align-items-center justify-content-center">

@@ -1,4 +1,4 @@
-import React, { Component , Fragment } from 'react';
+import React, { Component } from 'react';
 
 import './style/LoginForm.sass';
 
@@ -6,7 +6,6 @@ class LoginForm extends Component {
 
   render(){
     return(
-      <Fragment>
         <form>
           <div className="form-group">
             <label htmlFor="username">Nombre de usuario</label>
@@ -22,7 +21,6 @@ class LoginForm extends Component {
           </div>
           <button type="submit" className="btn btn-primary btn-block border-0">Ingresar</button>
         </form>
-      </Fragment>
     )
   }
 
