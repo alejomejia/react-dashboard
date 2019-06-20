@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './style/Login.sass';
+import LoginForm from '../components/LoginForm';
 
 class Login extends Component{
 
@@ -20,10 +21,13 @@ class Login extends Component{
           </div>
           <div className="card mb-4">
             <div className="card-body">
+              <LoginForm />
             </div>
-            {/* <div className="off-text">
-              <p className="mb-0"><a className="text-secondary" href="/password-recovery.html">¿Olvidaste tu contraseña?</a></p> 
-            </div> */}
+          </div>
+          <div className="off-text">
+            <p className="mb-0">
+              <a className="text-secondary" href="/password-recovery.html">¿Olvidaste tu contraseña?</a>
+            </p> 
           </div>
         </div>
       </div>

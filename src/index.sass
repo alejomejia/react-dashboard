@@ -6,6 +6,11 @@ $primary-color-hover: #a01834;
 $sans: 'Source Sans Pro', 'Helvetica', 'Verdana', sans-serif;
 $serif: 'Source Serif Pro', 'Georgia', serif;
 
+// Mixins 
+
+@mixin transition($to)
+  transition: $to .35s ease
+
 // General
 
 body,
@@ -13,3 +18,29 @@ html,
 #root
   height: 100%;
   overflow-x: hidden;
+
+body
+  font-family: $sans
+
+a
+  @include transition(all)
+
+  &.text-secondary
+    color: #808080 !important
+
+    &:hover
+      color: #a7a7a7 !important;
+
+a,
+a:hover
+  text-decoration: none
+  color: $primary-color
+
+.btn-primary,
+.bg-primary,
+.text-primary
+  background: $primary-color
+
+.btn-primary:hover,
+.btn-primary:active
+  background: $primary-color-hover
