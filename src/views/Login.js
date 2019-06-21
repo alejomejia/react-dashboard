@@ -2,11 +2,25 @@ import React, { Component } from 'react';
 
 import './style/Login.sass';
 import LoginForm from '../components/LoginForm';
+import PasswordRecoveryForm from '../components/PasswordRecoveryForm';
 
 const LOGO_URL = 'https://www.insightcrime.org/wp-content/uploads/2017/07/logo.png';
 
 class Login extends Component{
-  
+
+  constructor(props){
+    super(props);
+    this.state  = {
+      showRestore: false
+    }
+  }
+
+  handleToggle = () => {
+    this.setState({ 
+      showRestore : !this.state.showRestore
+    });
+  }
+
   render(){
     return(
       <div className="dark-theme">
@@ -17,12 +31,14 @@ class Login extends Component{
             </div>
             <div className="card mb-4">
               <div className="card-body">
-                <LoginForm />
+                { this.state.showRestore ? <PasswordRecoveryForm /> : <LoginForm /> }        
               </div>
             </div>
             <div className="off-text">
               <p className="mb-0">
-                <a className="text-secondary" href="/password-recovery.html">¿Olvidaste tu contraseña?</a>
+                <button className="text-secondary" onClick={this.handleToggle} >
+                { this.state.showRestore ? 'Regresar a Inicio de Sesión' : '¿Olvidaste tu contraseña?' }
+                </button>
               </p> 
             </div>
           </div>
@@ -30,7 +46,7 @@ class Login extends Component{
       </div>
     )
   }
-  
+
 }
 
 export default Login;
