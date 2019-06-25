@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 import LOGO from '../images/logo.png';
 import './style/Login.sass';
-import LoginForm from '../components/LoginForm';
+import PasswordRecoveryForm from '../components/PasswordRecoveryForm';
 
-class Login extends Component{
+class PasswordRecovery extends Component {
 
   render(){
     return(
@@ -17,13 +17,13 @@ class Login extends Component{
             </div>
             <div className="card mb-4">
               <div className="card-body">
-                <LoginForm />       
+                <PasswordRecoveryForm />        
               </div>
             </div>
             <div className="off-text">
               <p className="mb-0">
-                <Link className="text-secondary" to='/password-recovery' >
-                  ¿Olvidaste tu contraseña?
+                <Link className="text-secondary" to="/">
+                  Regresar a Inicio de Sesión
                 </Link>
               </p> 
             </div>
@@ -35,4 +35,4 @@ class Login extends Component{
 
 }
 
-export default Login;
+export default PasswordRecovery;
